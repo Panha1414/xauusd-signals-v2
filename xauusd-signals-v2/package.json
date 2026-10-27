@@ -1,6 +1,8 @@
 {
   "name": "xauusd-1to1-signals",
   "version": "1.0.0",
-  "description": "XAUUSD 1:1 Session Signals Dashboard with Telegram Alerts",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Open index.html or use vercel dev'"
+  }
 }
