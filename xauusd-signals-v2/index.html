@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XAUUSD 1:1 Session Signals | KH Time</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="gold">XAUUSD</span> 1:1 Signals
+      </div>
+      <div class="status">
+        <span id="lastUpdate">—</span>
+        <span id="connectionStatus" class="dot offline"></span>
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="label">Wins</span>
+        <span id="wins" class="value green">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Losses</span>
+        <span id="losses" class="value red">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Win Rate</span>
+        <span id="winRate" class="value yellow">0%</span>
+      </div>
+      <div class="stat">
+        <span class="label">Today</span>
+        <span id="tradesToday" class="value">0/3</span>
+      </div>
+      <div class="stat open-trade" id="openTradeBox" style="display:none;">
+        <span class="label">Open</span>
+        <span id="openTradeInfo" class="value"></span>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div id="chart" class="chart-container"></div>
+
+    <!-- Latest Signal Card -->
+    <div class="signal-card" id="signalCard">
+      <div class="signal-header">
+        <span id="signalType" class="badge">—</span>
+        <span id="signalTime">—</span>
+      </div>
+      <div class="signal-body">
+        <div><span>Entry</span><strong id="sigEntry">—</strong></div>
+        <div><span>SL</span><strong id="sigSL" class="red">—</strong></div>
+        <div><span>TP</span><strong id="sigTP" class="green">—</strong></div>
+        <div><span>RSI</span><strong id="sigRSI">—</strong></div>
+      </div>
+    </div>
+
+    <!-- Recent Signals Table -->
+    <div class="table-section">
+      <h3>សញ្ញាថ្មីៗ (Recent Signals)</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ពេលវេលា</th>
+              <th>ប្រភេទ</th>
+              <th>Entry</th>
+              <th>SL</th>
+              <th>TP</th>
+            </tr>
+          </thead>
+          <tbody id="signalsTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <p>Session: 14:00–17:00 & 19:30–23:00 (Asia/Phnom_Penh) • Max 3 trades/day • RR 1:1 • ATR×1.5</p>
+      <p class="small">Data: Twelve Data • Chart: TradingView Lightweight Charts • Not financial advice</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
